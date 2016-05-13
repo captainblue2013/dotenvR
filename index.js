@@ -42,4 +42,4 @@ dotenvr.load =  (file) => {
     return config;
 };
 
-module.exports = dotenvr.load;
+module.exports = dotenvr;

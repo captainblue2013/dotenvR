@@ -15,7 +15,7 @@ dotenvr.load =  (file) => {
         process.exit(-1);
     }
     let content = fs.readFileSync(file).toString();
-    let contentArr = content.split(EOL);
+    let contentArr = content.split(/\n\r?|\r\n?/);
     let config = {};
     let match;
     for(let k in contentArr){

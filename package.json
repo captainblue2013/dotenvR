@@ -1,6 +1,6 @@
 {
   "name": "dotenvr",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "dotenv Recursion",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/captainblue2013/dotenvR/issues"
   },
-  "homepage": "https://github.com/captainblue2013/dotenvR#readme"
+  "homepage": "https://github.com/captainblue2013/dotenvR#readme",
+  "directories": {
+    "test": "tests"
+  }
 }

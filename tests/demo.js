@@ -1,6 +1,7 @@
 /**
  * Created by lanhao on 16/5/13.
  */
-var config = require('./index').load();
-console.log(config);
+const config = require('../index').load();
+
+console.log(JSON.stringify(config,null,2));
 // { APP: 'dotenvr demo', I: { am: { teapot: '418' } } }

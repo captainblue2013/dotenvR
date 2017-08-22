@@ -28,8 +28,8 @@ dotenvr.load = (file) => {
         value = true;
       } else if(value === 'false'){
         value = false;
-      } else if(Number.parseFloat(value)){
-        value *=1;
+      } else if(!Number.isNaN(value*1)){
+        value *= 1;
       }else{
 
         value = value.replace(/\"|'/g,'')

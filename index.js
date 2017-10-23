@@ -6,7 +6,7 @@ let dotenvr = {};
 
 dotenvr.load = (file) => {
   if (file === undefined) {
-    file = process.cwd()+'/.env';
+    file = process.cwd() + '/.env';
   }
 
   let exist = fs.existsSync(file);
@@ -24,15 +24,15 @@ dotenvr.load = (file) => {
       let key = match[1];
       let value = match[2] ? match[2] : (process.env[key] || "");
 
-      if(value === 'true'){
+      if (value === 'true') {
         value = true;
-      } else if(value === 'false'){
+      } else if (value === 'false') {
         value = false;
-      } else if(!Number.isNaN(value*1)){
+      } else if (!Number.isNaN(value * 1)) {
         value *= 1;
-      }else{
+      } else {
 
-        value = value.replace(/\"|'/g,'')
+        value = value.replace(/\"|'/g, '')
       }
 
 
@@ -51,8 +51,8 @@ dotenvr.load = (file) => {
       }
     }
   }
-
-  return config;
+  process.env = Object.assign({},config, process.env);
+  return process.env;
 };
 
 module.exports = dotenvr;

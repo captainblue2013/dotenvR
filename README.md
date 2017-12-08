@@ -1,3 +1,6 @@
+
+[![Build Status](https://www.travis-ci.org/captainblue2013/dotenvR.svg?branch=master)](https://www.travis-ci.org/captainblue2013/dotenvR)
+
 # dotenvR
 ---
 

@@ -11,7 +11,7 @@ dotenvr.load = (file) => {
 
   let exist = fs.existsSync(file);
   if (!exist) {
-    throw Error(".env not found");
+    return process.env;
   }
   let content = fs.readFileSync(file).toString();
 
@@ -51,7 +51,11 @@ dotenvr.load = (file) => {
       }
     }
   }
-  process.env = Object.assign({},config, process.env);
+  if(process.env['FROG_ENV']==='prod'){
+    process.env = Object.assign({}, config, process.env);
+  }else {
+    process.env = Object.assign({}, process.env, config);
+  }
   return process.env;
 };
 

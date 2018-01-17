@@ -51,12 +51,9 @@ dotenvr.load = (file) => {
       }
     }
   }
-  if(process.env['FROG_ENV']==='prod'){
-    process.env = Object.assign({}, config, process.env);
-  }else {
-    process.env = Object.assign({}, process.env, config);
-  }
-  return process.env;
+  
+  //process.env = Object.assign({}, process.env, config);
+  return config;
 };
 
 module.exports = dotenvr;

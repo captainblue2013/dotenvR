@@ -1,6 +1,6 @@
 {
   "name": "dotenvr",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "description": "dotenv Recursion",
   "main": "index.js",
   "scripts": {

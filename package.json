@@ -1,10 +1,11 @@
 {
   "name": "dotenvr",
-  "version": "0.1.13",
+  "version": "0.1.16",
   "description": "dotenv Recursion",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coverage": "istanbul cover _mocha -- -R spec --timeout 5000 --recursive",
+    "coverage:check": "istanbul check-coverage"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,11 @@
   "homepage": "https://github.com/captainblue2013/dotenvR#readme",
   "directories": {
     "test": "tests"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.1.0",
+    "sinon": "^4.5.0"
   }
 }

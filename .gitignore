@@ -1,3 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 node_modules
 coverage
+dist
+tsconfig.tsbuildinfo
+.nyc_output
+.eslintcache
